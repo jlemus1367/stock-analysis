@@ -108,3 +108,12 @@ When comparing the processing times, the refactored script ran immensely quicker
 <img src = "resources/Original_2018.png" width = 200> vs <img src = "resources/VBA_Challenge_2018.png" width = 200>
 
 ## Summary
+
+### Disadvantages of Refactoring
+
+The most prominent disadvantage of refactoring code is the time-consuming process that can lead to frustration and discouragement. The daunting task seemed almost impossible, where one roadblock would lead to another. The refactoring process involves a profuse amount of trial and error, where one can break the code altogether. At one point, I compromised the information in my "2017" sheet by running an incorrect code during the refactoring process. I had no choice but to start over.
+
+### Advantages of Refactoring
+
+The prominent advantage of refactoring code is improving the efficiency and readability of the code. The ultimate purpose of refactoring is doing more with less to save memory and processing power for other coding opportunities. The original script had coding blocks that were hard to follow, especially with the nested for-loop embedded deep within the "All Stocks Analysis" macro subroutine. Nested loops can become excessively chaotic, especially when one is running a variable through it one at a time. The reader of the code can become disconcerted as a result. Instead of running loops within loops until we get lost in confusion, we can make arrays of the data we want to analyze and run it through a few individual loops to improve the processing speed and the user's peace of mind. Additionally, when the original script ran, it took considerably longer than the refactored code. I also noticed that the excel sheet would flicker as if using a tremendous amount of processing power. After I refactored the script, the execution was seamless.  Imagine if the analyses were more extensive in scope with even more stocks to be analyzed. The original script would not be ideal, especially when we consider the practice of stock trading. To trade stocks proficiently, one must access and process the vast information available rapidly to ensure optimal procurement prices. In a high stake situation, we want the most optimal results in the shortest time frame. 
+
