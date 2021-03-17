@@ -20,42 +20,21 @@ When comparing the stock analysis data of 2017 to 2018’s output, it becomes ab
 
 ### VBA Script Analysis
 
-When comparing the processing times, the refactored script ran immensely quicker than the original script. The main difference between each script was the different implementation of arrays and nested loops. The original script only used one array to store the various stock tickers and used a nested for-loop. The nested loop's outer loop ran through each ticker and output the data for each ticker, while the inner loop used each ticker to produce the output data with conditional statements. The following code block displays the original scripts for-loop program flow:
+When comparing the processing times, the refactored script ran immensely quicker than the original script. The main difference between each script was the different implementation of arrays and nested loops. The original script only used one array to store the various stock tickers and used a nested for-loop. The nested loop's outer loop ran through each ticker and output the data for each ticker, while the inner loop used each ticker to produce the output data with conditional statements. The following code block displays the original scripts for-loop initialization:
 '''
-  
+
     '4) Loop through tickers
     For I = 0 To 11
        ticker = tickers(I)
        totalVolume = 0
        
+'''
+After the for-loop is initialized, we nested the following loop within the loop above to produce the output data by having the conditional statements check if the current row's ticker matched the ticker(I) as the loop processed each individual row:
+
        '5) loop through rows in the data
        Worksheets(yearValue).Activate
        For J = 2 To RowCount
-           '5a) Get total volume for current ticker
-           If Cells(J, 1).Value = ticker Then
-
-               totalVolume = totalVolume + Cells(J, 8).Value
-
-           End If
-           '5b) get starting price for current ticker
-           If Cells(J - 1, 1).Value <> ticker And Cells(J, 1).Value = ticker Then
-
-               startingPrice = Cells(J, 6).Value
-
-           End If
-           '5c) get ending price for current ticker
-           If Cells(J + 1, 1).Value <> ticker And Cells(J, 1).Value = ticker Then
-
-               endingPrice = Cells(J, 6).Value
-
-           End If
-       Next J
        
-       '6) Output data for current ticker
-       Worksheets("All Stocks Analysis").Activate
-       Cells(4 + I, 1).Value = ticker
-       Cells(4 + I, 2).Value = totalVolume
-       Cells(4 + I, 3).Value = endingPrice / startingPrice - 1
-    Next I
 '''
+          
 ## Summary
