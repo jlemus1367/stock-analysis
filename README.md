@@ -1,4 +1,4 @@
-# VBA of Wall Street
+# Renewable Energy and VBA
 
 ## Overview of Project
 
